@@ -18,7 +18,7 @@ struct StringDllNodeValue final : public DllNodeValue {
         bool isEqual(const DllNodeValue* o) const override {
                 if (o == nullptr) return false;
                 const StringDllNodeValue* value = (const StringDllNodeValue*) o;
-                return *_ptr == *(value->_ptr);g
+                return *_ptr == *(value->_ptr);
         }
 
         std::string toString() const override {
@@ -45,7 +45,7 @@ struct HashTableElement final : public DllNodeValue {
                 return (_key == ptr->_key);
         }
 
-        std::string toString() const override;g
+        std::string toString() const override;
 
         HashTableElement(KeyType key, std::string* value) : _key(key), _value(value) {
         }
@@ -83,7 +83,7 @@ struct Dll {
         }
 
         void addNode(DllNodeValue* val);
-        DllNode* findNode(DllNodeValue* val);g
+        DllNode* findNode(DllNodeValue* val);
         bool deleteNode(DllNodeValue* val);
 
         std::string toString() const;
@@ -93,9 +93,9 @@ struct Dll {
         size_t _size;
 };
 
-g
+
 struct HashTable {
-g
+
         HashTable() : _hashRange(10), _size(0) {
                 init();
         }
@@ -132,7 +132,7 @@ g
         int getIndex(KeyType key) const {
                 return key % _hashRange;
         }
-g
+
         DllNode* findDllNode(KeyType key) const;
 
 

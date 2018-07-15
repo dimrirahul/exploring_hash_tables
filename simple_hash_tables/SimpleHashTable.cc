@@ -55,7 +55,7 @@ bool Dll::deleteNode(DllNodeValue* value) {
 
         _size--;
 
-        assert(_size != 0 ||  (_head == nullptr && _tail == nullptr));g
+        assert(_size != 0 ||  (_head == nullptr && _tail == nullptr));
 
         delete node;
         return true;
@@ -86,7 +86,7 @@ bool HashTable::addElement(const HashTableElement& element) {
 
         int dllIndex = getIndex(element.getKey());
         _dllEntries[dllIndex]->addNode(new HashTableElement(element));
-        _size++;g
+        _size++;
         return true;
 }
 
